@@ -52,7 +52,7 @@ public class MainActivity extends ViewController implements FragmentInterface, D
         if (requestCode == 1 && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            dm.takedPicture(imageBitmap);
+            dm.takenPicture(imageBitmap);
         }
     }
 

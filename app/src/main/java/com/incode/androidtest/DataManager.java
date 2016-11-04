@@ -82,7 +82,7 @@ public enum DataManager {
 
     }
 
-    public void takedPicture(Bitmap bitmap){
+    public void takenPicture(Bitmap bitmap){
 
         data = cachedData;
         Picture picture = new Picture();
