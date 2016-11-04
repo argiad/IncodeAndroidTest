@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.incode.androidtest.BuildConfig;
 import com.incode.androidtest.DataManager;
 
 /**
@@ -32,7 +33,7 @@ public abstract class BaseFragment<T> extends Fragment {
     /**
      *  Business Logic DataManager shortcut
      */
-    DataManager dm = DataManager.INSTANSE;
+    DataManager dm = DataManager.INSTANCE;
 
     /**
      *  Log Tag
@@ -75,7 +76,9 @@ public abstract class BaseFragment<T> extends Fragment {
     }
 
     void log(String textToLog){
-        Log.d(TAG, textToLog);
+        if (BuildConfig.DEBUG) {
+            Log.d(TAG, textToLog);
+        }
     }
 
     protected abstract int getLayoutResourceId();

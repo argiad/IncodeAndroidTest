@@ -5,6 +5,8 @@ package com.incode.androidtest.interfaces;
  */
 
 public interface FragmentInterface {
-    void onPictureClick(int num);
-    void sharePicture (int num);
+    void onPictureClick(String pictureID);
+    void onPictureShare (String pictureID);
+    void onDataReload();
+    void onTakePicture();
 }

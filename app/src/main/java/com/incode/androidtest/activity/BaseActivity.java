@@ -3,6 +3,7 @@ package com.incode.androidtest.activity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.incode.androidtest.BuildConfig;
 import com.incode.androidtest.DataManager;
 
 /**
@@ -14,7 +15,7 @@ abstract class BaseActivity extends AppCompatActivity {
     /**
      *  Business Logic DataManager shortcut
      */
-    DataManager dm = DataManager.INSTANSE;
+    DataManager dm = DataManager.INSTANCE;
 
     /**
      *  Log Tag
@@ -23,6 +24,8 @@ abstract class BaseActivity extends AppCompatActivity {
 
 
     void log(String textToLog){
-        Log.d(TAG, textToLog);
+        if (BuildConfig.DEBUG) {
+            Log.d(TAG, textToLog);
+        }
     }
 }
